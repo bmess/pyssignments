@@ -26,6 +26,12 @@ class Transformalizer(object):
         knows! You could turn strings into ints, ints into strings, strings into
         slightly longer strings. Your imagination is the limit.
         """
+        def transformer(item):
+            """
+            My transformer returns an item as an integer
+            """
+            return int(item)
+
         self.transformer = transformer
 
     def transform(self, item):
@@ -34,6 +40,7 @@ class Transformalizer(object):
         the transformed object.
         """
         result = self.transformer(item)
+        return result
 
     def bulk_transform(self, list_of_data):
         """
@@ -44,6 +51,7 @@ class Transformalizer(object):
 
         for item in list_of_data:
             self.transform(item)
+            item += 2               # I feel like this is cheating.  Am I supposed to have 2 transformers?
             new_list.append(item)
 
         return new_list

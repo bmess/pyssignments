@@ -1,6 +1,1 @@
-=========
-Changelog
-=========
-
-1/4/2013: Initial Release
-
+/home/bobby/Git/pyssignments/CHANGES.txt
