@@ -57,7 +57,7 @@ class Transformalizer(object):
         self.transformer = local_transform
 
         # take that sucka ... i mean it seems the item was checked but not reassigned to the original list for
-        #  transposing
+        #  transposing the data.
         for item in list_of_data:
             item = self.transform(item)
             new_list.append(item)
