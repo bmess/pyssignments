@@ -49,9 +49,17 @@ class Transformalizer(object):
         """
         new_list = []
 
+        # for the babies - this is our transforming method
+        def local_transform(item):
+            return item + 2
+
+        #set the new method
+        self.transformer = local_transform
+
+        # take that sucka ... i mean it seems the item was checked but not reassigned to the original list for
+        #  transposing
         for item in list_of_data:
-            self.transform(item)
-            item += 2               # I feel like this is cheating.  Am I supposed to have 2 transformers?
+            item = self.transform(item)
             new_list.append(item)
 
         return new_list
