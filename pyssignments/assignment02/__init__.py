@@ -33,6 +33,8 @@ class WordCounter(object):
         """
         self._all_words = []
         self._unique_words = []
+
+        #  My note:  I think Counter object would be best here
         self._word_counts = {}
 
     def read_text_string(self, text_string):
